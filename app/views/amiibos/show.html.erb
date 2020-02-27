@@ -1,0 +1,41 @@
+
+<body id="page">
+
+	<center>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-red sticky-top">
+	  <a id= "nombre" class="navbar-brand" href="#"><%= @details_1['name'] %></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	 
+	    </div>
+	  </div>
+	</nav>
+
+
+
+	<div class="card" style="width: 25rem;">
+	  <img class="card-img-top" alt="" <%= image_tag(@details_1['image'], style: "width: 280px")%>
+	  
+	  <div class="card-body">
+	    <h5 class="card-title">Character: <%= @details_1['character'] %></h5>
+
+	  </div>
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item"> Amiibo Series: <%= @details_1['amiiboSeries'] %></li>
+	    <li class="list-group-item"> Game Series: <%= @details_1['gameSeries'] %></li>
+	    <li class="list-group-item"> Japan Release Date: <%= @details_1['release']['jp'] %></li>
+	   	<li class="list-group-item"> USA Release Date: <%= @details_1['release']['eu'] %></li>
+	    <li class="list-group-item"> Code: <%= @details_1['head'] %><%= @details_1['tail'] %></li>
+	    <li class="list-group-item"> Type: <%= @details_1['type'] %></li>
+	  </ul>
+	  <div class="card-body">
+	    <a href="index" class="card-link">List of Amiibos</a>
+	  </div>
+	</div>
+	</center>
+
+</body>

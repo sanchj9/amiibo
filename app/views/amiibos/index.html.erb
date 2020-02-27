@@ -1,0 +1,88 @@
+
+
+<body>
+
+<!--barra de navegacion-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-red sticky-top">
+  <a class="navbar-brand" href="#">AMIIBOS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Nav bar responsive <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Example 1</a>
+      <a class="nav-item nav-link" href="#">Example 2</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Example 3</a>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-light bg-yellow">
+  <a class="navbar-brand">Find your amiibo</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Example" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+
+<!--barra de navegacion-->
+
+<!--Prueba CSS -->
+
+<!--
+	<div class ="logo logo_main"> list of ⋱ amiibos ⋰ </div>
+
+	<div class= "nav">
+		<div class ="wrap">
+			<div class ="logo logo_small"> ⋱ amiibo ⋰ </div>
+			<nav>
+				<ul>
+					<li><a href="#">Example 1</a></li>
+					<li><a href="#">Example 2</a></li>
+					<li><a href="#">Example 3</a></li>
+				</ul>
+ 			</nav>
+ 		</div>
+ 	</div>
+
+-->
+ 
+	<div>
+		<img src="http://cdn02.nintendo-europe.com/media/images/10_share_images/others_3/amiibo_4/H2x1_Amiibo_main_image1280w.jpg" class="card-img-top">
+	</div>
+
+	<div class= "media">
+		<div class="media-body">
+			<table class= "table table-hover">
+				<tr>
+				<thead class= "thead-dark table-fixed">
+					<th>IMAGE</th>
+					<th>NAME</th>
+					<th>LINK</th>
+
+				</thead>
+				</tr>
+				<% @amiibos.each do |amiibo| %>
+					<tr>
+						<td>
+							<%= link_to amiibo_path(amiibo['name']) do%>
+							<%= image_tag(amiibo['image'], style: "width: 100px")%>
+							<% end %>
+						</td>
+						
+						<td><%=amiibo['name']%></td>
+						<td><%= link_to amiibo_path(amiibo['name'])do %> Details
+								<% end %>
+						</td> 
+
+					</tr>
+					<% end %>
+
+			</table>
+		</div>
+	</div>
+</body>

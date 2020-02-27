@@ -1,0 +1,24 @@
+// Place all the styles related to the amiibos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous&display=swap');
+
+table {
+
+	border-collapse: collapse;
+
+}
+
+
+td {
+	padding: 50 px;
+}
+
+
+#nombre {
+	margin: 0;
+	padding: 0;
+	font-size: x-large;
+	font-family: "Helvetica"
+}
